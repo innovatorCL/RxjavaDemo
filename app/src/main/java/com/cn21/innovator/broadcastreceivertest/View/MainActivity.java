@@ -129,9 +129,12 @@ public class MainActivity extends AppCompatActivity {
               }
             })
             .subscribe(new Observer<Long>() {
+
+              Disposable disposable;
               @Override
               public void onSubscribe(Disposable d) {
                 Log.d("TAG", "轮询任务开始采用subscribe连接");
+                disposable = d;
               }
 
               @Override

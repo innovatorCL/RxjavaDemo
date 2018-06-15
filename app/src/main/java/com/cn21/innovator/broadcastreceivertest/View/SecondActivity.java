@@ -1,5 +1,6 @@
 package com.cn21.innovator.broadcastreceivertest.View;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -78,7 +79,8 @@ public class SecondActivity extends AppCompatActivity {
     go.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-
+        Intent i = new Intent(SecondActivity.this,ThirdActivity.class);
+        startActivity(i);
       }
     });
   }
